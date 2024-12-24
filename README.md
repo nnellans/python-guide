@@ -11,15 +11,16 @@ Data Types
 Functions
 
 ```python
-def function_name(param1=value1,param2,param3) -> typeHint:
+def function_name(param1: typeHint = value1, param2: typeHint, param3) -> typeHint:
     """documentation string"""
     do stuff
     return something
 ```
 
 -   Params are optional
+-   `: typeHint` for params are optional
 -   Default values for params are optional
--   `-> typeHint` is optional
+-   `-> typeHint` for the function is optional
     -   `typeHint` can be `None` if the function returns nothing
 -   docstring is optional
 
@@ -40,6 +41,8 @@ def function_name(**kwargs):
 - `**kwargs` represents any number of named arugments (keywords)
 - all keys & values will be stored in a dict named `kwargs`
 - `kwargs` is convention, but any name can be used here
+
+# TO-DO: documentation strings
 
 # TO-DO: lambda functions
 

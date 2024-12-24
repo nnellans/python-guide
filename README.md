@@ -17,6 +17,7 @@ def function_name(param1: typeHint = value1, param2: typeHint, param3) -> typeHi
     return something
 ```
 
+-   For naming, use `lowercase_with_underscores` for functions and methods
 -   Params are optional
 -   `: typeHint` for params are optional
 -   Default values for params are optional

@@ -1,5 +1,50 @@
 # python-guide
 
+---
+
+Data Types
+
+
+
+---
+
+Functions
+
+```python
+def function_name(param1=value1,param2,param3) -> typeHint:
+    """documentation string"""
+    do stuff
+    return something
+```
+
+-   Params are optional
+-   Default values for params are optional
+-   `-> typeHint` is optional
+    -   `typeHint` can be `None` if the function returns nothing
+-   docstring is optional
+
+```python
+def function_name(*args):
+    do stuff using args[2]
+```
+
+- `*args` represents any number of positional parameters
+- all values will be stored in a tuple named `args`
+- `args` is convention, but any name can be used here
+
+```python
+def function_name(**kwargs):
+    do stuff using kwargs["key"]
+```
+
+- `**kwargs` represents any number of named arugments (keywords)
+- all keys & values will be stored in a dict named `kwargs`
+- `kwargs` is convention, but any name can be used here
+
+# TO-DO: lambda functions
+
+---
+
 `if` Statement
 
 ```python
@@ -62,20 +107,23 @@ Special Loop Statements
 ```python
 continue  # end the current loop iteration, start the next iteration
 break     # end the loop altogether
+else      # see below
 
-# else statements can optionally be used by for loops that use break
+# 'else' statements can optionally be used in 'for' loops that use break
 for iterator in sequence:
     if condition:
         break
     do stuff
+# when all iterations are successful, and no break occurred
 else:
-    do stuff after all iterations were successful and no break occurred
+    do stuff
 
-# else can optionally be used by while loops that use break
+# 'else' can optionally be used in 'while' loops that use break
 while condition:
     if condition:
         break
     do stuff
+# when all iterations are successful, no break occurred, and the while condition is now false
 else:
-    do stuff after all iterations were successful, no break occurred, and the while condition is now false
+    do stuff
 ```

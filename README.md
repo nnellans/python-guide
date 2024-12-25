@@ -4,7 +4,73 @@
 
 Data Types
 
+### String `str`
 
+-   A sequence of characters that holds textual data
+-   To use, enclose your text with double-quotes or single-quotes, for example:
+    - `"This is a string"`
+    - `'This is also a string'`
+-   You can also use triple quotes to enclose your string (either double-quotes or single-quotes)
+    -   This is most often used to store multi-line strings
+    -   This is commonly used when defining docstrings for functions, methods, etc.
+    -   ```python
+        """this is an example
+        of a multi-line string"""
+        ```
+-   Raw Strings are exactly like they sound, and do not support escape sequences at all
+    -   To use raw strings, precede the string with an `r` or `R`, for example:
+        -   `r"This is a raw string \n where escape sequences are \\ ignored"`
+-   Formatted Strings, or f-strings, let you interpolate values into your strings, as well as other modifications
+    -   To use f-strings, precede the string with an `f` or `F`, for example:
+        -   `f"This is a {varName1} formatted {varName2} string"`
+    -   f-strings support many different types of string manipulations (TO-DO)
+-   Convert other data types to a string with `str()`, for example:
+    - To convert an integer:  `str(42)`
+    - To convert a floating-point number:  `str(27.0)`  
+
+### Integer `int`
+
+-   Whole numbers with no decimal places. Can be positive or negative
+-   To use, just type the unquoted number, for example:
+    -   `varName = 250`
+    -   `varName = -30`
+-   Optionally, to make a number more readble, you can use underscores as a thousands separate, for example:
+    -   `1_000_000`
+-   Convert other data types to an integer with `int()`, for example:
+    - To convert a string:  `int("42")`
+    - To convert a floating-point number:  `int(27.0)`
+
+### Floating-Point Numbers `float`
+
+-   Numbers that have a decimal place. Can be positive or negative.
+-   To use, just type the unquoted number, for example:
+    -   `varName = 7.9`
+    -   `varName = -34.8`
+-   Optionally, to make a number more readable, you can use underscores as a thousands separator, for example:
+    -   `3_000.25`
+-   Convert other data types to a floating-point number with `float()`, for example:
+    -   To convert a string:  `float("73")`
+    -   To convert an integer:  `float(15)`
+
+### Boolean `bool`
+
+-   A value that represents either true (1) or false (0)
+-   To use, just type the unquoted literal, capitalization required, for example:
+    -   `varName = True`
+    -   `varName = False`
+-   Convert other data types to a boolean with `bool()`, for example:
+    -   To convert an integer:  `bool(20)`
+    -   To convert a string:  `bool("text")`
+    -   Anything that is empty or zero will convert to `False`
+    -   Everything else will convert to `True`
+
+### List `list`
+
+### Tuple
+
+### Set
+
+### Dictionary `dict`
 
 ---
 
@@ -19,8 +85,8 @@ def function_name(param1: typeHint = value1, param2: typeHint, param3) -> typeHi
 
 -   For naming, use `lowercase_with_underscores` for functions and methods
 -   Params are optional
--   `: typeHint` for params are optional
--   Default values for params are optional
+    -   `: typeHint` for params are optional
+    -   Default values for params are optional
 -   `-> typeHint` for the function is optional
     -   `typeHint` can be `None` if the function returns nothing
 -   docstring is optional
@@ -108,11 +174,11 @@ while condition:
 
 Special Loop Statements
 
-```python
-continue  # end the current loop iteration, start the next iteration
-break     # end the loop altogether
-else      # see below
+- `continue`   end the current loop iteration, start the next iteration
+- `break`      end the loop altogether
+- `else`       see below
 
+```python
 # 'else' statements can optionally be used in 'for' loops that use break
 for iterator in sequence:
     if condition:

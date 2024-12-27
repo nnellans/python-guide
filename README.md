@@ -6,7 +6,6 @@ Data Types
 
 ### String `str`
 
--   A sequence of characters that holds textual data
 -   To use, enclose your text with double-quotes or single-quotes, for example:
     - `"This is a string"`
     - `'This is also a string'`
@@ -24,9 +23,7 @@ Data Types
     -   To use f-strings, precede the string with an `f` or `F`, for example:
         -   `f"This is a {varName1} formatted {varName2} string"`
     -   f-strings support many different types of string manipulations (TO-DO)
--   Convert other data types to a string with `str()`, for example:
-    - To convert an integer:  `str(42)`
-    - To convert a floating-point number:  `str(27.0)`  
+-   Convert other data types to a string with `str()`
 
 ### Integer `int`
 
@@ -34,11 +31,9 @@ Data Types
 -   To use, just type the unquoted number, for example:
     -   `varName = 250`
     -   `varName = -30`
--   Optionally, to make a number more readble, you can use underscores as a thousands separate, for example:
+-   Optionally, to make a number more readable, you can use underscores as a thousands separate, for example:
     -   `1_000_000`
--   Convert other data types to an integer with `int()`, for example:
-    - To convert a string:  `int("42")`
-    - To convert a floating-point number:  `int(27.0)`
+-   Convert other data types to an integer with `int()`
 
 ### Floating-Point Numbers `float`
 
@@ -48,9 +43,7 @@ Data Types
     -   `varName = -34.8`
 -   Optionally, to make a number more readable, you can use underscores as a thousands separator, for example:
     -   `3_000.25`
--   Convert other data types to a floating-point number with `float()`, for example:
-    -   To convert a string:  `float("73")`
-    -   To convert an integer:  `float(15)`
+-   Convert other data types to a floating-point number with `float()`
 
 ### Boolean `bool`
 
@@ -58,11 +51,9 @@ Data Types
 -   To use, just type the unquoted literal, capitalization required, for example:
     -   `varName = True`
     -   `varName = False`
--   Convert other data types to a boolean with `bool()`, for example:
-    -   To convert an integer:  `bool(20)`
-    -   To convert a string:  `bool("text")`
-    -   Anything that is empty or zero will convert to `False`
-    -   Everything else will convert to `True`
+-   Convert other data types to a boolean with `bool()`
+    -   Anything that is empty or zero will be converted to `False`
+    -   Everything else will be converted to `True`
 
 ### List `list`
 
@@ -197,3 +188,36 @@ while condition:
 else:
     do stuff
 ```
+
+---
+
+## Imports, Modules, Packages
+
+Packages
+
+-   Popular package registry: PyPI
+    -   `Py`thon `P`ackage `I`ndex
+    -   https://pypi.org
+-   Popular package manager: pip
+    -   The latest versions of Python will also come with pip
+    -   Install a package: `pip install packageName`
+        -   By default, pip fetches packages from PyPI
+        -   After install, you can `import` the package into your program (see below)
+
+Modules (aka Libraries)
+
+-   Python comes with many modules, but not all are loaded by default
+-   Note: It is customary to place all `import` statements at the beginning of a script
+-   `import random`
+    -   Use a function from the module: `random.choice()`
+-   `import random as alias`
+    -   Make the `random` module available under an alias
+    -   Use a function from the module's alias: `alias.choice()`
+-   `from random import choice, randint`
+    -   Import only specific function(s) from the `random` module into the current namespace
+    -   Use functions without the `random.` namespace: `choice()` or `randint()`
+    -   `from random import *`
+        -   Import all functions from the `random` module into the current namespace
+-   `from random import choice as alias`
+    -   Import only specific function(s) from the `random` module into the current namespace, but make them available under an alias
+    -   Use the aliased functions without the `random.` namespace: `somethingElse()`

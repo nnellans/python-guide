@@ -209,15 +209,15 @@ Modules (aka Libraries)
 -   Python comes with many modules, but not all are loaded by default
 -   Note: It is customary to place all `import` statements at the beginning of a script
 -   `import random`
-    -   Use a function from the module: `random.choice()`
+    -   How to use a function from the module: `random.choice()`
 -   `import random as alias`
-    -   Make the `random` module available under an alias
-    -   Use a function from the module's alias: `alias.choice()`
+    -   Makes the `random` module available under an alias
+    -   How to use a function from the module's alias: `alias.choice()`
 -   `from random import choice, randint`
-    -   Import only specific function(s) from the `random` module into the current namespace
-    -   Use functions without the `random.` namespace: `choice()` or `randint()`
+    -   Imports only specific function(s) from the `random` module into the current namespace
+    -   How to use functions without the `random.` namespace: `choice()` or `randint()`
     -   `from random import *`
-        -   Import all functions from the `random` module into the current namespace
+        -   Imports all functions from the `random` module into the current namespace
 -   `from random import choice as alias`
-    -   Import only specific function(s) from the `random` module into the current namespace, but make them available under an alias
-    -   Use the aliased functions without the `random.` namespace: `somethingElse()`
+    -   Imports only specific function(s) from the `random` module into the current namespace, but make them available under an alias
+    -   How to use the aliased functions without the `random.` namespace: `somethingElse()`

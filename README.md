@@ -215,9 +215,11 @@ Modules (aka Libraries)
     -   How to use a function from the module's alias: `alias.choice()`
 -   `from random import choice, randint`
     -   Imports only specific function(s) from the `random` module into the current namespace
-    -   How to use functions without the `random.` namespace: `choice()` or `randint()`
+    -   No longer requires the use of the `random.` namespace
+    -   How to use the imported functions: `choice()` or `randint()`
     -   `from random import *`
         -   Imports all functions from the `random` module into the current namespace
 -   `from random import choice as alias`
-    -   Imports only specific function(s) from the `random` module into the current namespace, but make them available under an alias
-    -   How to use the aliased functions without the `random.` namespace: `somethingElse()`
+    -   Imports a specific function from the `random` module into the current namespace, but makes it available under an alias
+    -   No longer requires the use of the `random.` namespace
+    -   How to use the aliased function: `alias()`

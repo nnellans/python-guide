@@ -23,7 +23,7 @@ var_name = f"This is {another_var} inside a string"  # precede the string with a
 var_name = str(int_var)
 ```
 
-### Integer: `int`
+### Integer Number: `int`
 
 ```python
 # un-quoted whole numbers, can be positive or negative
@@ -36,7 +36,7 @@ var_name = 1_000_000
 var_name = int("40")
 ```
 
-### Floating-Point Numbers: `float`
+### Floating-Point Number: `float`
 
 ```python
 # un-quoted numbers with a decimal point, can be positive or negative
@@ -80,7 +80,7 @@ list_name[3]
 - The values in a List are ordered, using a zero-based index
 - The values in a List can be changed, added, or removed
 
-### Tuple
+### Tuple: `tuple`
 
 ```python
 # parenthesis surrounding comma-separated values
@@ -132,12 +132,21 @@ dict_name["key2"]
 - The values in a Dictionary are ordered, using a key-based index
 - The key/value pairs in a Dictonary can be changed, added, or removed
 
+### Comparison of Collection & Mapping Types
+
+| Type | Example | Ordered | Mutable<br />Values | Add/Remove<br />Values | Duplicates |
+| --- | --- | :---: | :---: | :---: | :---: |
+| `list` | `['value', 'value', 'value']` | :white_check_mark: (number index) | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| `tuple` | `('value', 'value', 'value')` | :white_check_mark: (number index) | :red_circle: | :red_circle: | :white_check_mark: |
+| `set` | `{'value1', 'value2', 'value3'}` | :red_circle: | :red_circle: | :white_check_mark: | :red_circle: |
+| `dict` | `{'key1':'value', 'key2':'value'}` | :white_check_mark: (key index) | :white_check_mark: | :white_check_mark: | keys: :red_circle:, values: :white_check_mark: |
+
 ---
 
-Functions
+## Functions
 
 ```python
-def function_name(param1: typeHint = value1, param2: typeHint, param3) -> typeHint:
+def function_name(param1: typeHint = defaultValue, param2: typeHint, param3) -> typeHint:
     """documentation string"""
     do stuff
     return something

@@ -155,9 +155,11 @@ dict_name["key2"]
 | Type | Example | Ordered | Mutable<br />Values | Add/Remove<br />Values | Duplicates |
 | --- | --- | :---: | :---: | :---: | :---: |
 | `list` | `['value', 'value']` | :white_check_mark:<br />(number index) | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `tuple` | `('value', 'value')` | :white_check_mark:<br />(number index) | :red_circle: | :red_circle: | :white_check_mark: |
-| `set` | `{'value1', 'value2'}` | :red_circle: | :red_circle: | :white_check_mark: | :red_circle: |
+| `tuple` | `('value', 'value')` | :white_check_mark:<br />(number index) | :red_circle:* | :red_circle:* | :white_check_mark: |
+| `set` | `{'value1', 'value2'}` | :red_circle: | :red_circle: | :white_check_mark: | :red_circle:* |
 | `dict` | `{'key1':'value', 'key2':'value'}` | :white_check_mark:<br />(key index) | :white_check_mark: | :white_check_mark: | keys: :red_circle:<br />values: :white_check_mark: |
+
+`*` = defining feature
 
 ---
 

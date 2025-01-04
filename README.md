@@ -1,65 +1,120 @@
 # python-guide
 
----
+## Data Types
 
-Data Types
+### String: `str`
 
-### String `str`
+```python
+# enclosed with single or double quotes
+var_name = "this is a string"
+var_name = 'this is also a string'
 
--   To use, enclose your text with double-quotes or single-quotes, for example:
-    - `"This is a string"`
-    - `'This is also a string'`
--   You can also use triple quotes to enclose your string (either double-quotes or single-quotes)
-    -   This is most often used to store multi-line strings
-    -   This is commonly used when defining docstrings for functions, methods, etc.
-    -   ```python
-        """this is an example
-        of a multi-line string"""
-        ```
--   Raw Strings are exactly like they sound, and do not support escape sequences at all
-    -   To use raw strings, precede the string with an `r` or `R`, for example:
-        -   `r"This is a raw string \n where escape sequences are \\ ignored"`
--   Formatted Strings, or f-strings, let you interpolate values into your strings, as well as other modifications
-    -   To use f-strings, precede the string with an `f` or `F`, for example:
-        -   `f"This is a {varName1} formatted {varName2} string"`
-    -   f-strings support many different types of string manipulations (TO-DO)
--   Convert other data types to a string with `str()`
+# multi-line strings can be created with triple quotes (single or double quotes)
+var_name = """this is a
+multi-line string"""
 
-### Integer `int`
+# raw strings leave everything intact, and do not support escape sequences
+# precede the string with an r or R
+var_name = r"This is a raw string"
 
--   Whole numbers with no decimal places. Can be positive or negative
--   To use, just type the unquoted number, for example:
-    -   `varName = 250`
-    -   `varName = -30`
--   Optionally, to make a number more readable, you can use underscores as a thousands separate, for example:
-    -   `1_000_000`
--   Convert other data types to an integer with `int()`
+# formatted strings (f-string) allow interpolation as well as many other modifications (TO-DO)
+# precede the string with an f or F
+var_name = f"This is {another_var} inside a string"
 
-### Floating-Point Numbers `float`
+# convert other data types to a string with str()
+var_name = str(int_var)
+```
 
--   Numbers that have a decimal place. Can be positive or negative.
--   To use, just type the unquoted number, for example:
-    -   `varName = 7.9`
-    -   `varName = -34.8`
--   Optionally, to make a number more readable, you can use underscores as a thousands separator, for example:
-    -   `3_000.25`
--   Convert other data types to a floating-point number with `float()`
+### Integer: `int`
 
-### Boolean `bool`
+```python
+# un-quoted whole numbers, can be positive or negative
+var_name = 234
 
--   A value that represents either true (1) or false (0)
--   To use, just type the unquoted literal, capitalization required, for example:
-    -   `varName = True`
-    -   `varName = False`
--   Convert other data types to a boolean with `bool()`
-    -   Anything that is empty or zero will be converted to `False`
-    -   Everything else will be converted to `True`
+# for better readability, you can optionally use _ as a thousands separator
+var_name = 1_000_000
 
-### List `list`
+# convert other data types to an integer with int()
+var_name = int("40")
+```
+
+### Floating-Point Numbers: `float`
+
+```python
+# un-quoted numbers with a decimal point, can be positive or negative
+var_name = 37.33
+
+# for better readability, you can optionally use _ as a thousands separator
+var_name = 3_000.25
+
+# convert other data types to a floating-point number with float()
+var_name = float(31)
+```
+
+### Boolean: `bool`
+
+```python
+# un-quoted True or False literals, capitalization required
+var_name = True
+var_name = False
+
+# convert other data types to a boolean with bool()
+# any value that is empty or zero will be converted to False
+# anything else will be converted to True
+var_name = bool(0)
+```
+
+### List: `list`
+
+```python
+# square brackets surrounding comma-separated values
+var_name = ["value", 356, True, "fourth"]
+
+# use a single value from a list by referencing its index
+list_name[3]
+
+# convert other data types to a list with list()
+# TO-DO
+```
+
+- The values in a List can be of different types, if you wish
+- The values in a List can be duplicated
+- The values in a List are ordered, using a zero-based index
+- The values in a List can be changed, added, or removed
+
+- Lists are mutable
 
 ### Tuple
 
+```python
+# parenthesis surrounding comma-separated values
+var_name = ("value", 356, True, "fourth")
+
+# use a single value form a tuple by referencing its index
+tuple_name[2]
+
+# convert other data types to a tuple with tuple()
+# TO-DO
+```
+
+- The values in a Tuple can be of different types, if you wish
+- The values in a Tuple can be duplicated
+- The values in a Tuple are ordered, using a zero-based index
+- The values in a Tuple can not be changed, added, or removed
+- The parenthesis are optional, as it is the comma that actually creates the Tuple
+  - The exception is creating an empty tuple, where parenthesis are required: `var_name = ()`
+
 ### Set
+
+```python
+# curly brackets surrounding comma-separated values
+var_name = {"value", 356, True, "fourth"}
+```
+
+- The values in a Set can be of different types, if you wish
+- The values in a Set can not be duplicated, they must be unique
+- The values in a Set are not ordered, they do not have indexes
+- The values in a Set can not be changed. However, values can be added, or removed
 
 ### Dictionary `dict`
 

@@ -109,7 +109,7 @@ var_name = {"value", 356, True, "fourth"}
 
 - The values in a Set can be of different types, if you wish
 - The values in a Set can not be duplicated, they must be unique
-- The values in a Set are not ordered, they do not have indexes
+- The values in a Set are not ordered, and therefore do not have indexes
 - The values in a Set can not be changed. However, values can be added, or removed
 
 ### Dictionary `dict`
@@ -127,8 +127,8 @@ var_name = {
 dict_name["key2"]
 ```
 
-- The keys in a Dictionary can not be duplicated, they must be unique
 - The values in a Dictionary can be of different types, if you wish
+- The keys in a Dictionary can not be duplicated, they must be unique
 - The values in a Dictionary are ordered, using a key-based index
 - The key/value pairs in a Dictonary can be changed, added, or removed
 

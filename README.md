@@ -1,5 +1,7 @@
 # python-guide
 
+## TO-DO Variables
+
 ## Data Types
 
 ### String: `str`
@@ -178,13 +180,15 @@ def function_name(**kwargs):
 - all keys & values will be stored in a dict named `kwargs`
 - `kwargs` is convention, but any name can be used here
 
-# TO-DO: documentation strings
+## TO-DO: documentation strings
 
-# TO-DO: lambda functions
+## TO-DO: lambda functions
 
 ---
 
-`if` Statement
+## Conditional Logic
+
+### `if` Statement
 
 ```python
 if condition:
@@ -197,7 +201,7 @@ else:
 
 - The `elif` and `else` sections are optional
 
-`match` Statement
+### `match` Statement
 
 ```python
 match expression:
@@ -213,7 +217,9 @@ match expression:
 
 ---
 
-`for` Loops
+## Loops
+
+### `for` Loops
 
 ```python
 # loop through a list, dict, or str
@@ -233,7 +239,7 @@ for key, value in dictVariable.items():
     do stuff using key/value
 ```
 
-`while` Loops
+### `while` Loops
 
 ```python
 # continues as long as condition is true
@@ -241,7 +247,7 @@ while condition:
     do stuff
 ```
 
-Special Loop Statements
+### Special Loop Statements
 
 - `continue`   end the current loop iteration, start the next iteration
 - `break`      end the loop altogether
@@ -271,33 +277,33 @@ else:
 
 ## Imports, Modules, Packages
 
-Packages
+### Packages
 
 -   Popular package registry: PyPI
     -   `Py`thon `P`ackage `I`ndex
     -   https://pypi.org
 -   Popular package manager: pip
-    -   The latest versions of Python will also come with pip
+    -   The latest versions of Python come with pip
     -   Install a package: `pip install packageName`
         -   By default, pip fetches packages from PyPI
         -   After install, you can `import` the package into your program (see below)
 
-Modules (aka Libraries)
+### Modules (aka Libraries)
 
 -   Python comes with many modules, but not all are loaded by default
 -   Note: It is customary to place all `import` statements at the beginning of a script
 -   `import random`
-    -   How to use a function from the module: `random.choice()`
+    -   Use a function from the module: `random.choice()`
 -   `import random as alias`
     -   Makes the `random` module available under an alias
-    -   How to use a function from the module's alias: `alias.choice()`
+    -   Use a function from the module's alias: `alias.choice()`
 -   `from random import choice, randint`
     -   Imports only specific function(s) from the `random` module into the current namespace
     -   No longer requires the use of the `random.` namespace
-    -   How to use the imported functions: `choice()` or `randint()`
+    -   Use the imported functions: `choice()` or `randint()`
     -   `from random import *`
         -   Imports all functions from the `random` module into the current namespace
 -   `from random import choice as alias`
     -   Imports a specific function from the `random` module into the current namespace, but makes it available under an alias
     -   No longer requires the use of the `random.` namespace
-    -   How to use the aliased function: `alias()`
+    -   Use the aliased function: `alias()`

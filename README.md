@@ -14,12 +14,10 @@ var_name = """this is a
 multi-line string"""
 
 # raw strings leave everything intact, and do not support escape sequences
-# precede the string with an r or R
-var_name = r"This is a raw string"
+var_name = r"This is a raw string"  # precede the string with an r or R
 
 # formatted strings (f-string) allow interpolation as well as many other modifications (TO-DO)
-# precede the string with an f or F
-var_name = f"This is {another_var} inside a string"
+var_name = f"This is {another_var} inside a string"  # precede the string with an f or F
 
 # convert other data types to a string with str()
 var_name = str(int_var)
@@ -82,8 +80,6 @@ list_name[3]
 - The values in a List are ordered, using a zero-based index
 - The values in a List can be changed, added, or removed
 
-- Lists are mutable
-
 ### Tuple
 
 ```python
@@ -117,6 +113,24 @@ var_name = {"value", 356, True, "fourth"}
 - The values in a Set can not be changed. However, values can be added, or removed
 
 ### Dictionary `dict`
+
+```python
+# curly brackets surrounding key/value pairs, which are separated by commas
+var_name = {
+    "key1": "value",
+    "key2": 356,
+    "key3": True,
+    "key4": "fourth"
+}
+
+# use a single value form a dictionary by referencing its index
+dict_name["key2"]
+```
+
+- The keys in a Dictionary can not be duplicated, they must be unique
+- The values in a Dictionary can be of different types, if you wish
+- The values in a Dictionary are ordered, using a key-based index
+- The key/value pairs in a Dictonary can be changed, added, or removed
 
 ---
 

@@ -114,8 +114,8 @@ tuple_name[2]
 - The values in a Tuple can be of different types, if you wish
 - The values in a Tuple can be duplicated
 - The values in a Tuple are ordered, using a zero-based index
-- The values in a Tuple can not be changed, added, or removed
-- The parenthesis are optional, the comma is what actually creates the Tuple
+- The values in a Tuple can *not* be changed, added, or removed
+- The parenthesis are optional, as the comma is what actually creates the Tuple
   - The exception is creating an empty tuple, where parenthesis are required: `var_name = ()`
 
 ### Set
@@ -126,9 +126,9 @@ var_name = {"value", 356, True, "fourth"}
 ```
 
 - The values in a Set can be of different types, if you wish
-- The values in a Set can not be duplicated, they must be unique
-- The values in a Set are not ordered, and therefore do not have indexes
-- The values in a Set can not be changed. However, values can be added, or removed
+- The values in a Set can *not* be duplicated, they must be unique
+- The values in a Set are *not* ordered, and therefore do not have indexes
+- The values in a Set can *not* be changed. However, values can be added, or removed
 
 ### Dictionary `dict`
 
@@ -146,7 +146,7 @@ dict_name["key2"]
 ```
 
 - The values in a Dictionary can be of different types, if you wish
-- The keys in a Dictionary can not be duplicated, they must be unique
+- The keys in a Dictionary can *not* be duplicated, they must be unique
 - The values in a Dictionary are ordered, using a key-based index
 - The key/value pairs in a Dictonary can be changed, added, or removed
 

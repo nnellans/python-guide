@@ -99,7 +99,7 @@ tuple_name[2]
 - The values in a Tuple can be duplicated
 - The values in a Tuple are ordered, using a zero-based index
 - The values in a Tuple can not be changed, added, or removed
-- The parenthesis are optional, as it is the comma that actually creates the Tuple
+- The parenthesis are optional, the comma is what actually creates the Tuple
   - The exception is creating an empty tuple, where parenthesis are required: `var_name = ()`
 
 ### Set

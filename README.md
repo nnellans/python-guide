@@ -231,6 +231,27 @@ def function_name(**kwargs):
 
 ---
 
+## Comparison Operators
+
+```python
+a == b  # equal to
+a != b  # not equal to
+a > b   # greater than
+a >= b  # greater than or equal to
+a < b   # less than
+a <= b  # less than or equal to
+
+# and, or, not
+a == b and c == d  # both statements must be true
+a == b or c == d   # at least one of the statements must be true
+not a == b         # the statement must not be true
+
+# comparison operators can be chained together
+a < b <= c  # this is equivalent to: a < b and b <= c
+```
+
+---
+
 ## Conditional Logic
 
 ### `if` Statement
@@ -242,6 +263,12 @@ elif condition:
     do stuff
 else:
     do stuff
+
+# shortened, single-line if statement
+if condition: do one command
+
+# condensed if/else statement, aka ternary operator
+"trueValue" if condition else "falseValue"
 ```
 
 - The `elif` and `else` sections are optional

@@ -16,7 +16,27 @@
 
 ---
 
-## TO-DO Variables
+## Variables
+
+```python
+# creating variables and assigning values
+var_name: typeHint = "value"
+```
+
+-   `: typeHint` is optional
+    -   Helpful for complex types like: `var_name: dict[str, tuple[int,int,int]]`<br />
+        This would be a dict with strings for keys, and tuples containing 3 integers as values
+-   `= "value"` is optional
+    -   You can declare a variable without a value. However, you can't use that variable until you assign a value to it
+
+```python
+# assign the same value to multiple variables at once
+var_name1 = var_name2 = var_name3 = "some value"
+
+# assign a seperate variable to each value from an iterable (unpacking)
+iterable = ["value1", "value2", "value3"]
+var1, var2, var3 = iterable
+```
 
 ## Data Types
 
@@ -28,8 +48,15 @@ var_name = "this is a string"
 var_name = 'this is also a string'
 
 # multi-line strings can be created with triple quotes (single or double quotes)
-var_name = """this is a
-multi-line string"""
+var_name = """
+this is a
+multi-line string
+"""
+
+var_name = """\
+add the slash as shown above
+and the initial new line will not be included
+"""
 
 # raw strings leave everything intact, and do not support escape sequences
 var_name = r"This is a raw string"  # precede the string with an r or R
@@ -321,6 +348,7 @@ else:
     -   Use the imported functions: `choice()` or `randint()`
     -   `from random import *`
         -   Imports all functions from the `random` module into the current namespace
+        -   In general, [don't do this](https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module)
 -   `from random import choice as alias`
     -   Imports a specific function from the `random` module into the current namespace, but makes it available under an alias
     -   No longer requires the use of the `random.` namespace

@@ -120,11 +120,6 @@ list_name[3]
 # TO-DO
 ```
 
-- The values in a List can be of different types, if you wish
-- The values in a List can be duplicated
-- The values in a List are ordered, using a zero-based index
-- The values in a List can be changed, added, or removed
-
 ### Tuple: `tuple`
 
 ```python
@@ -138,21 +133,17 @@ tuple_name[2]
 # TO-DO
 ```
 
-- The values in a Tuple can be of different types, if you wish
-- The values in a Tuple can be duplicated
-- The values in a Tuple are ordered, using a zero-based index
 - The values in a Tuple can *not* be changed, added, or removed
 - The parenthesis are optional, as the comma is what actually creates the Tuple
   - The exception is creating an empty tuple, where parenthesis are required: `var_name = ()`
 
-### Set
+### Set: `set`
 
 ```python
 # curly brackets surrounding comma-separated values
 var_name = {"value", 356, True, "fourth"}
 ```
 
-- The values in a Set can be of different types, if you wish
 - The values in a Set can *not* be duplicated, they must be unique
 - The values in a Set are *not* ordered, and therefore do not have indexes
 - The values in a Set can *not* be changed. However, values can be added, or removed
@@ -172,10 +163,7 @@ var_name = {
 dict_name["key2"]
 ```
 
-- The values in a Dictionary can be of different types, if you wish
 - The keys in a Dictionary can *not* be duplicated, they must be unique
-- The values in a Dictionary are ordered, using a key-based index
-- The key/value pairs in a Dictonary can be changed, added, or removed
 
 ### Comparison of Collection & Mapping Types
 
@@ -380,3 +368,58 @@ else:
     -   Imports a specific function from the `random` module into the current namespace, but makes it available under an alias
     -   No longer requires the use of the `random.` namespace
     -   Use the aliased function: `alias()`
+
+---
+
+## Classes
+
+```python
+class some_name:
+
+    # instance method
+    # used when creating a new instance/object of the class
+    def __init__(self, parameter1, parameter2, parameter3=default):
+        # assigning parameter values to instance variables (self._xxx)
+        if not parameter1:
+            raise ValueError(“parameter1 is undefined”)
+        if parameter2 not in [“value1”, “value2”]:
+            raise ValueError(“invalid value for parameter2”)
+        self._parameter1 = parameter1
+        self._parameter2 = parameter2
+        self._parameter3 = parameter3
+        # or, if you are using "setters"
+        parameter1(parameter1)
+        parameter2(parameter2)
+    
+    # instance method
+    # used when printing an instance/object of the class
+    def __str__(self):
+        return f”{self._parameter1} and also {self._parameter2}”
+
+    # custom instance method
+    def yourCustomMethod(self, parameter1):
+        commands
+        return ...
+
+    # “getter” for parameter1
+    @property
+    def parameter1(self):
+        return self._parameter1
+
+    # “setter” for parameter1
+    @parameter1.setter
+    def parameter1(self, parameter1):
+        if parameter1 not in [“one”, “two”, “three”]:
+            raise ValueError(“invalid value for parameter1”)
+        self._parameter1 = parameter1
+
+    # class variables
+    class_var1 = "value"
+    class_var2 = "value"
+
+    # class methods
+    @classmethod
+    def method_name(cls, parameter1):
+        commands
+        return ...
+```

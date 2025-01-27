@@ -118,6 +118,25 @@ list_name[3]
 
 # convert other data types to a list with list()
 # TO-DO
+
+# add an value to the end of the list
+list_name.append("new value")
+
+# remove the first matching value
+list_name.remove("value")
+
+# remove a value by index
+del list_name[3]
+
+# find the number of items in a list
+len(list_name)
+
+# sort a list
+list_name.sort()
+list_name.sort(reverse=True)
+
+# reverse the entries in a list
+list_name.reverse()
 ```
 
 ### Tuple: `tuple`
@@ -161,6 +180,12 @@ var_name = {
 
 # use a single value form a dictionary by referencing its index
 dict_name["key2"]
+
+# find the number of kv pairs in a dict
+len(dict_name)
+
+# remove a kv pair by index
+del dict_name["key"]
 ```
 
 - The keys in a Dictionary can *not* be duplicated, they must be unique
@@ -213,9 +238,13 @@ def function_name(**kwargs):
 - all keys & values will be stored in a dict named `kwargs`
 - `kwargs` is convention, but any name can be used here
 
-## TO-DO: documentation strings
+## Documentation Strings
 
-## TO-DO: lambda functions
+To-DO
+
+## Lambda Functions
+
+TO-DO
 
 ---
 
@@ -236,6 +265,10 @@ not a == b         # the statement must not be true
 
 # comparison operators can be chained together
 a < b <= c  # this is equivalent to: a < b and b <= c
+
+# checking for a value in a list
+'value' in list_variable      # returns true if the value is in the list
+'value' not in list_variable  # returns true if the value is not in the list
 ```
 
 ---
@@ -297,6 +330,14 @@ for index, value in enumerate(listVariable):
 # loop through a dict with key and value
 for key, value in dictVariable.items():
     do stuff using key/value
+
+# loop through a dict's keys
+for key in dictVariable.keys():
+    do stuff using key
+
+# loop through a dict's values
+for value in dictVariable.value():
+    do stuff using value
 ```
 
 ### `while` Loops
@@ -332,6 +373,14 @@ while condition:
 else:
     do stuff
 ```
+
+## List Comprehensions
+
+TO-DO
+
+## Dict Comprehensions
+
+TO-DO
 
 ---
 
@@ -422,4 +471,17 @@ class some_name:
     def method_name(cls, parameter1):
         commands
         return ...
+```
+
+---
+
+## Try & Except
+
+```python
+try:
+    commands to try
+except ErrorType:
+    commands to run if the given ErrorType is thrown
+else:
+    commands that run if the try was successful
 ```
